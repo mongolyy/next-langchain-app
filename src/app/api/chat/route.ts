@@ -10,6 +10,7 @@ export async function POST(req: Request) {
   const { stream, handlers } = LangChainStream()
 
   const llm = new ChatOpenAI({
+    modelName: 'gpt-4',
     streaming: true
   })
 
